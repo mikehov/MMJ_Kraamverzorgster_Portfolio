@@ -1,3 +1,5 @@
+/* @use postcss-preset-env */
+
 * {
     border: none;
     margin: 0;
@@ -91,18 +93,20 @@ a.button-main:hover {
 
 
 
-/* -- Landing -- */
+/* -- Nav -- */
 
 nav {
     top: 0;
     width: 100vw;
-    position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
-
     z-index: 2;
 }
 
-nav .relative {
+nav.fixed {
+    position: fixed;
+}
+
+nav.relative {
     position: relative;
 }
 
@@ -149,68 +153,101 @@ nav li:last-child a {
     background-color: var(--pinklight);
 }
 
-#landing .landing-content-left {
+#landing .landing-content {
     width: 100vw;
-    height: 50%;
-    padding: 1rem;
-    position: relative;
-    z-index: 1;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
+    
+    padding: 1rem;
 }
 
-#landing .landing-content-left .text {
-    display: none;
+#landing h1 {
+    padding: 0rem;
+    max-width: 40rem;
+    margin: auto;
 }
 
-#landing .landing-content-left .quote {
+#landing p.quote {
+    padding: 1rem 0rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+#landing .profile-text {
+    margin: 1rem 0rem;
+}
+
+#landing .profile-text img {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: var(--white) solid 5px;
+    border-radius: 50%;
+}
+
+#landing .profile-text .author {
+    max-width: 40rem;
+    margin: auto;
+}
+
+#landing .profile-text p.job {
+    max-width: 40rem;
+    color: #b5b5b5;
+    margin: auto;
+}
+
+#landing .profile-text p.text {
+    max-width: 40rem;
+    margin: auto;
     margin-top: 1rem;
 }
 
-#landing .landing-content-left-center {
-    margin: auto;
+#landing .profile-text p.text a {
+    color: var(--pinkpurple);
+    font-style: italic;
+}
+
+#landing .button-cv {
+    text-align: center;
+
+    margin-top: -1.5rem;
+    margin-bottom: 3rem;
+}
+
+#landing .button-cv a {
+    background-color: var(--pink);
+}
+
+#landing .button-div {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#landing .contact article {
+    width: 100vw;
+    bottom: 1rem;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
-#landing .landing-content-right {
-    width: 100vw;
-    height: 50%;
-    padding: 1rem;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-}
-
-#landing .landing-content-right img {
-    width: 100vw;
-    height: 300px;
-    border: var(--white) solid 10px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-#landing .landing-content-right .button-main {
-    display: inherit;
-    margin-top: -2rem;
-}
-
-.contact {
     background-color: var(--white);
     padding: 1rem;
     border-radius: 3px;
 }
 
-.contact a {
+#landing .contact a {
     display: block;
     font-weight: 500;
+    color: var(--pink);
 }
 
-.contact a:nth-child(2) {
-    color: var(--pinkpurple);
+#landing .contact a:nth-child(2) {
+    color: var(--lightblue);
 }
 
 #landing .landing-gradient {
@@ -222,8 +259,8 @@ nav li:last-child a {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 202, 212, 1));
 }
 
-#landing h3 {
-    font-size: 1.5rem;
+#landing .landing-side {
+    display: none;
 }
 
 
@@ -405,20 +442,29 @@ footer h3 {
         margin-right: 3rem;
     }
 
+    #landing .profile-text p.text {
+        display: none;
+    }
+
     #about-me {
         flex: wrap;
     }
 
-    #about-me .content-left {
-    }
-    
-    #about-me .content-right {
-    }
-    
 
-    #landing .landing-content-left .text {
-        display: inherit;
+
+    /* -- Landing -- */
+
+
+
+    #landing .profile-text p.text {
+        display: block;
     }
+
+
+
+    /* -- Gallery -- */
+
+
 
     #gallery article {
         display: grid;
@@ -446,16 +492,56 @@ footer h3 {
 
 @media (min-width: 960px) {
 
-    #landing .landing-content-left {
-        width: 50%;
+    #landing .landing-content {
+        width: 60%;
         height: 100vh;
-    }
-    
-    #landing .landing-content-right {
-        width: 50%;
-        height: 100vh;
+        text-align: left;
+        padding: 2rem;
+
+        margin: auto;
+        position: relative;
     }
 
+    #landing .landing-side {
+        width: 40%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #landing .landing-side img {
+        width: 400px;
+        height: auto;
+        margin: auto auto;
+
+        border: var(--white) solid 10px;
+        border-radius: 3px;
+    }
+
+    #landing .profile-text img, #landing .profile-text .button-cv {
+        display: none;
+    }
+
+    #landing .button-cv {
+        width: 400px;
+    }
+
+    #landing .contact {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        margin-top: 0rem;
+    }
+
+    #landing .contact article {
+        width: 300px;
+        position: absolute;
+        right: -2rem;
+    }
 
 
     #gallery article {
