@@ -87,8 +87,8 @@ a.button-main {
 
 a.button-main:hover {
     background-color: var(--pink);
-    -webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+    /* -webkit-transform: translateY(-5px);
+	transform: translateY(-5px); */
 }
 
 
@@ -264,6 +264,193 @@ nav li:last-child a {
 }
 
 
+/* -- Experience -- */
+
+
+
+#experience {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    
+    padding: 1rem;
+    background-color: var(--lightblue);
+    text-align: center;
+}
+
+#experience .flex {
+    flex-basis: 100%;    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#experience div svg:first-child {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#experience svg {
+    width: 120px;
+    height: auto;
+    padding: 0.3rem;
+}
+
+#experience h2 {
+    text-align: center;
+    display: inline-block;
+    color: var(--white);
+} 
+
+#experience section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#experience section p {
+    color: var(--white);
+    max-width: 40rem;
+    margin: auto;
+}
+
+#experience section div {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 1rem 0rem;
+}
+
+#experience section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0.2rem;
+    border: var(--white) 5px solid;
+    border-radius: 3px;
+}
+
+#experience .button-main {
+    background-color: var(--pink);
+    margin: 0rem 0.5rem;
+}
+
+
+
+/* -- About me -- */
+
+
+
+#about-me {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    
+    padding: 1rem;
+    background-color: var(--pink);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#about-me .flex {
+    flex-basis: 100%;    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#about-me div svg:first-child {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#about-me svg {
+    max-width: 120px;
+    height: auto;
+    padding: 0.3rem;
+}
+
+#about-me h2 {
+    text-align: center;
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 1rem;
+} 
+
+#about-me img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: var(--white) solid 10px;
+    object-fit: cover;
+}
+
+#about-me .content-left {
+    margin: 0.7rem;
+}
+
+#about-me h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--lightblue);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+#about-me .content-right p {
+    max-width: 40rem;
+    color: var(--text-color);
+    border-radius: 0px 3px 3px;
+    background-color: var(--white);
+    padding: 1.5rem;
+}
+
+#about-me .content-right p span {
+    color: var(--lightblue);
+    font-style: italic;
+}
+
+#about-me .contact {
+    margin-top: 1rem;
+    margin-left: -4rem;
+    background-color: var(--white);    
+    display: inline-block;
+    width: 100%;
+    margin: 1rem auto 0rem;
+    padding: 1rem;
+    padding-right: 3rem;
+}
+
+#about-me .contact p {
+    padding: 0rem;
+    color: var(--text-color);
+    background-color: inherit;
+}
+
+#about-me .contact a {
+    font-weight: 500;
+    color: var(--pink);
+    display: block;
+}
+
+#about-me .contact a:nth-child(2) {
+    color: var(--lightblue);
+}
+
+#about-me .button-cv {
+    text-align: center;
+    width: 300px;
+    margin-top: -1rem;
+}
+
+
 
 /* -- Gallery -- */
 
@@ -326,86 +513,78 @@ nav li:last-child a {
 
 
 
-/* -- Experience -- */
+/* -- Evaluations -- */
 
 
 
-#experience {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    
-    padding: 1rem;
-    background-color: var(--white);
-}
-
-
-
-/* -- About me -- */
-
-
-
-#about-me {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    
-    padding: 1rem;
-    background-color: var(--pink);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#about-me .flex {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-#about-me h2 {
-    text-align: center;
-    flex-basis: 100%;
+#evaluations {
+    background-color: var(--pinklight);
 } 
 
-#about-me img {
-    width: 300px;
-    border-radius: 3px;
-    border: var(--white) solid 10px;
+#evaluations .all-evaluations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-#about-me .content-left {
-    margin: 0.7rem;
+#evaluations h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.5rem 1rem 0rem 1rem;
 }
 
-#about-me .content-right {
-    margin: 0.7rem;
+#evaluations .flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
 }
 
-#about-me .content-right p {
-    max-width: 40rem;
-    padding: 1.5rem;
-    color: var(--text-color);
-    border-radius: 3px;
-
+#evaluations .flex div {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-#about-me .contact {
-    margin-top: 1rem;
-    margin-left: -4rem;
-    background-color: var(--white);    
-    display: inline-block;
-    padding-right: 3rem;
+#evaluations .flex div p {
+    margin-bottom: 1rem;
 }
 
-#about-me .content-right .contact p {
-    padding: 0rem;
-    color: var(--text-color);
-    background-color: inherit;
+#evaluations .flex svg {
+    width: 120px;
+    padding: 0.5rem;
 }
 
+#evaluations .flex svg:first-child {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#evaluations p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+}
+
+#evaluations article {
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+}
+
+#evaluations article svg {
+    height: 30px;
+    display: block;
+}
+
+#evaluations .double-quote {
+    width: 30px;
+    margin: auto auto;
+    margin-top: -2rem;
+}
 
 
 
@@ -420,6 +599,7 @@ footer {
 
 footer h3, footer p, footer a {
     color: var(--white);
+    display: block;
 }
 
 footer h3 {
@@ -514,7 +694,7 @@ footer h3 {
     }
 
     #landing .landing-side img {
-        width: 400px;
+        width: 350px;
         height: auto;
         margin: auto auto;
 
@@ -527,7 +707,8 @@ footer h3 {
     }
 
     #landing .button-cv {
-        width: 400px;
+        position: relative;
+        width: 350px;
     }
 
     #landing .contact {
@@ -543,6 +724,26 @@ footer h3 {
         right: -2rem;
     }
 
+    #about-me img {
+        width: 300px;
+        height: inherit;
+        border-radius: 3px;
+        border: var(--white) solid 10px;
+        object-fit: cover;
+    }
+
+    #about-me h3 {
+        margin-top: 0rem;
+    }
+
+    #about-me .content-right {
+        margin: 0.7rem;
+        padding: 1.5rem;
+    }
+
+    #about-me .contact {
+        width: 300px;
+    }
 
     #gallery article {
         grid-template-columns: repeat(4, 1fr);
@@ -561,4 +762,11 @@ footer h3 {
         grid-row: span 1;
     }
 
+    #evaluations .all-evaluations {
+    }
+
+    #evaluations .all-evaluations article {
+        flex-wrap: wrap;
+        width: 40rem;
+    }
 }
